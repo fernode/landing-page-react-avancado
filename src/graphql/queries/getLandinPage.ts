@@ -1,43 +1,57 @@
 const GET_LANDING_PAGE = `
-  fragment logo on LandingPage {
-    logo {
+fragment logo on LandingPage {
+  logo {
+    alternativeText
+    url
+  }
+}
+
+fragment header on LandingPage {
+  header {
+    title
+    description
+    button {
+      label
+      url
+    }
+    image {
       alternativeText
       url
     }
   }
+}
 
-  fragment header on LandingPage {
-    header {
+fragment sectionAboutProject on LandingPage {
+  sectionAboutProject {
+    title
+    description
+    image {
+      url
+      alternativeText
+    }
+  }
+}
+
+fragment sectionTech on LandingPage {
+  sectionTech {
+    title
+    techIcons {
       title
-      description
-      button {
-        label
-        url
-      }
-      image {
-        alternativeText
+      icon {
         url
       }
     }
   }
+}
 
-  fragment sectionAboutProject on LandingPage {
-    sectionAboutProject {
-      title
-      description
-      image {
-        url
-        alternativeText
-      }
-    }
+query GET_LANDING_PAGE {
+  landingPage {
+    ...logo
+    ...header
+    ...sectionAboutProject
+    ...sectionTech
   }
+}
 
-  query GET_LANDING_PAGE {
-    landingPage {
-      ...logo
-      ...header
-      ...sectionAboutProject
-    }
-  }
 `
 export default GET_LANDING_PAGE
