@@ -34,8 +34,10 @@ const PricingBox = ({
     <Button href={button.url} onClick={onClick} withPrice>
       <p>{button.label}</p>
       <div>
-        <S.ButtonFullPrice>R$549</S.ButtonFullPrice>
-        <S.ButtonDiscountPrice>R${totalPrice}</S.ButtonDiscountPrice>
+        <S.ButtonFullPrice>R${totalPrice}</S.ButtonFullPrice>
+        <S.ButtonDiscountPrice>
+          R${numberInstallments * priceInstallment}
+        </S.ButtonDiscountPrice>
       </div>
     </Button>
   </S.Box>
