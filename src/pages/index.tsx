@@ -15,8 +15,8 @@ import SectionFaq from 'components/SectionFaq'
 import Footer from 'components/Footer'
 import JsonSchema from 'components/JsonSchema'
 
-import GET_LANDING_PAGE from '../graphql/queries/getLandinPage'
-import { LandingPageProps } from '../types/api'
+import GET_LANDING_PAGE from 'graphql/queries/getLandinPage'
+import { LandingPageProps } from 'types/api'
 
 const Index = ({
   logo,
@@ -24,7 +24,8 @@ const Index = ({
   sectionAboutProject,
   sectionTech,
   sectionConcepts,
-  sectionModules
+  sectionModules,
+  sectionAgenda
 }: LandingPageProps) => (
   <>
     <SectionHero logo={logo} header={header} />
@@ -32,7 +33,7 @@ const Index = ({
     <SectionTech {...sectionTech} />
     <SectionConcepts {...sectionConcepts} />
     <SectionModules {...sectionModules} />
-    <SectionAgenda />
+    <SectionAgenda {...sectionAgenda} />
     <PricingBox />
     <SectionAboutUs />
     <SectionReviews />

@@ -4,8 +4,8 @@ import Heading from 'components/Heading'
 import Container from 'components/Container'
 
 import * as S from './styles'
-import { SectionTechProps } from '../../types/api'
-import { getImageUrl } from '../../utils/getImageUrl'
+import { SectionTechProps } from 'types/api'
+import { getImageUrl } from 'utils/getImageUrl'
 
 const SectionTech = ({ title, techIcons }: SectionTechProps) => (
   <S.Wrapper>
