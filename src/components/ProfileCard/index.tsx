@@ -33,7 +33,7 @@ const ProfileCard: React.FC<Props> = ({
   description
 }) => (
   <S.Card key={name}>
-    <S.Image src={getImageUrl(image)} />
+    <S.Image src={getImageUrl(image)} loading="lazy" />
     <S.Name>{name}</S.Name>
     <S.Role>{role}</S.Role>
     <S.SocialLinks>
